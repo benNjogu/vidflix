@@ -1,6 +1,7 @@
 import http from "./httpService";
+import config from "../config.json";
 
-const apiEndPoint = "http://localhost:3000/vidflix/api/movies";
+const apiEndPoint = config.apiUrl + "/movies";
 export function getMovies() {
   return http.get(apiEndPoint);
 }
